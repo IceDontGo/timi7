@@ -20,16 +20,42 @@ function checkAge() {
 //}
 
 function calculate() {
-  const num1 = Number(document.getElementById("num1)").value);
-  const num2 = Number(document.getElementById("num2)").value);
+  const num1 = Number(document.getElementById("num1").value);
+  const num2 = Number(document.getElementById("num2").value);
   const op = document.getElementById("operator").value;
 
   let result;
   if (op === "+") {
     result = num1 + num2;
-  } else {
+  } else if (op === "-") {
     result = num1 - num2;
+  } else if (op === "*") {
+    result = num1 * num2;
+  } else {
+    result = num1 / num2;
   }
   const output = document.getElementById("calcOutput");
   output.innerText = result;
+}
+
+function compliment() {
+  document.getElementById("complimentOutput").innerText =
+    "Þú ert frábær forritari!";
+}
+
+function einkunn(stig) {
+  if (stig >= 90) {
+    return "Frábært";
+  } else if (stig >= 70) {
+    return "Gott";
+  } else if (stig >= 50) {
+    return "Staðið";
+  } else {
+    return "Fall";
+  }
+}
+
+function showGrade() {
+  const stig = Number(document.getElementById("scoreInput").value);
+  document.getElementById("gradeOutput").innerText = einkunn(stig);
 }

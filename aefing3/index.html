@@ -30,7 +30,10 @@
       <select id="operator">
         <option value="+">+</option>
         <option value="-">-</option>
+
         <!-- ÆFING 3.1: Bættu * og / við hér -->
+        <option value="*">*</option>
+        <option value="/">/</option>
       </select>
       <input id="num2" type="number" placeholder="Tala 2..." />
       <button onclick="calculate()">Reikna</button>
@@ -38,7 +41,23 @@
     </div>
 
     <!-- ÆFING 3.2: Nýtt kort með takka sem birtir hrós -->
-
+    <div class="card">
+      <h2>Þarftu hrós?</h2>
+      <button onclick="compliment()">Hrós</button>
+      <div class="output" id="complimentOutput">Niðurstaða birtist hér</div>
+    </div>
     <!-- ÆFING 3.3: Nýtt kort með input fyrir stig, takka og output -->
+    <div class="card">
+      <h2>Einkunn</h2>
+      <input
+        id="scoreInput"
+        type="number"
+        min="0"
+        max="100"
+        placeholder="Sláðu inn stig (0-100)"
+      />
+      <button onclick="showGrade()">Sýna einkunn</button>
+      <div class="output" id="°gradeOutput">Niðurstaða birtist hér</div>
+    </div>
   </body>
 </html>
